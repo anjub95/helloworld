@@ -1,4 +1,4 @@
-node('$NODE_NAME'){
+node('master'){
 checkout scm
 	echo "Before build"
 props = readYaml file: 'Jenkinsfile.yaml'
