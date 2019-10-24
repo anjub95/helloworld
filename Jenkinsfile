@@ -1,3 +1,4 @@
+node('$NODE_NAME'){
 checkout scm
 props = readYaml file: 'Jenkinsfile.yaml'
 library 'pipeline-build' //REQUIRED TO MAKE mavenBuild GLOBAL FUNCTION AVAILABLE
@@ -8,4 +9,4 @@ library 'pipeline-build' //REQUIRED TO MAKE mavenBuild GLOBAL FUNCTION AVAILABLE
 	    stage('build'){
 				runBuild(props,buildNum)
 	    }
-		
+}//end node	
