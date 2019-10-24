@@ -1,0 +1,6 @@
+branchStrategy:  gitflow
+#maven build parameters
+ant:  1.9
+java: 1.8
+#maven: apache-maven-3.3.9
+appVersion: 1.0
