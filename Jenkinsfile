@@ -11,3 +11,11 @@ library 'pipeline-build' //REQUIRED TO MAKE mavenBuild GLOBAL FUNCTION AVAILABLE
 				runBuild(props,buildNum)
 	    }
 }//end node	
+
+def runBuild(props,buildNum){
+	mavenBuild{
+		pomFileLocation = props.pomFileLocation
+		appVersion = props.appVersion
+		artifactBuildNumber = buildNum
+	}
+}	
