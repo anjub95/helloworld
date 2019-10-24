@@ -5,7 +5,8 @@ checkout scm
 	echo "Before build"
 props = readYaml file: 'Jenkinsfile.yaml'
 library 'pipeline-build' //REQUIRED TO MAKE mavenBuild GLOBAL FUNCTION AVAILABLE
-		buildNum = common.getGitTimeStampDotGitSha()
+	BUILD_NUMBER = env.BUILD_NUMBER
+		buildNum = BUILD_NUMBER
 		version = "${props.appVersion}.${buildNum}"
         echo "${version}"
 		//Build
