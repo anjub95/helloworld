@@ -1,3 +1,5 @@
+import groovy.xml.*;
+import groovy.util.*;
 node('master'){
 checkout scm
 	echo "Before build"
